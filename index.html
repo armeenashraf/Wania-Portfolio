@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wania ♡ | My Little Corner</title>
+  <meta name="description" content="Wania's little corner of the internet: a matric graduate and Concordia College student exploring art, sketching, painting and creativity.">
+  <meta name="theme-color" content="#0E0A0B">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%8C%B8%3C/text%3E%3C/svg%3E">
+
+  <!-- lets CSS hide reveal-elements only when JS is available -->
+  <script>document.documentElement.classList.add('js')</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <a class="skip" href="#about">Skip to content</a>
+
+  <!-- soft page-load veil -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <svg class="loader__spark" viewBox="0 0 24 24"><use href="#sparkle"/></svg>
+      <span class="loader__name">Wania</span>
+      <svg class="loader__spark loader__spark--b" viewBox="0 0 24 24"><use href="#sparkle"/></svg>
+    </div>
+  </div>
+
+  <!-- ============ SVG SPRITE (icons + doodles) ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="sparkle" viewBox="0 0 24 24"><path d="M12 0c.8 7 5 11.2 12 12-7 .8-11.2 5-12 12-.8-7-5-11.2-12-12C7 11.2 11.2 7 12 0z" fill="currentColor"/></symbol>
+
+      <symbol id="heart" viewBox="0 0 24 24"><path d="M12 20.6C6 15.7 3 12.4 3 9a4.6 4.6 0 0 1 8.3-2.8L12 7l.7-.8A4.6 4.6 0 0 1 21 9c0 3.4-3 6.7-9 11.6z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+      <symbol id="heart-fill" viewBox="0 0 24 24"><path d="M12 20.6C6 15.7 3 12.4 3 9a4.6 4.6 0 0 1 8.3-2.8L12 7l.7-.8A4.6 4.6 0 0 1 21 9c0 3.4-3 6.7-9 11.6z" fill="currentColor"/></symbol>
+
+      <symbol id="flower" viewBox="0 0 48 48">
+        <g fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
+          <ellipse cx="24" cy="12.5" rx="5.5" ry="9.5"/>
+          <ellipse cx="24" cy="12.5" rx="5.5" ry="9.5" transform="rotate(72 24 24)"/>
+          <ellipse cx="24" cy="12.5" rx="5.5" ry="9.5" transform="rotate(144 24 24)"/>
+          <ellipse cx="24" cy="12.5" rx="5.5" ry="9.5" transform="rotate(216 24 24)"/>
+          <ellipse cx="24" cy="12.5" rx="5.5" ry="9.5" transform="rotate(288 24 24)"/>
+        </g>
+        <circle cx="24" cy="24" r="3" fill="currentColor"/>
+      </symbol>
+
+      <symbol id="daisy" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+          <path d="M24 4v12M24 32v12M4 24h12M32 24h12M10 10l8.5 8.5M29.5 29.5L38 38M38 10l-8.5 8.5M18.5 29.5L10 38"/>
+        </g>
+        <circle cx="24" cy="24" r="4" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      </symbol>
+
+      <symbol id="sprig" viewBox="0 0 80 160">
+        <g fill="currentColor" fill-opacity=".1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+          <path fill="none" d="M40 158C38 110 44 60 40 8"/>
+          <path d="M40 122C26 120 16 110 14 98c14 0 24 8 26 24z"/>
+          <path d="M41 102c14-2 24-12 26-24-14 0-24 8-26 24z"/>
+          <path d="M41 80C27 78 17 68 15 56c14 0 24 8 26 24z"/>
+          <path d="M42 60c14-2 24-12 26-24-14 0-24 8-26 24z"/>
+          <path d="M42 38C30 36 22 28 20 18c12 0 20 8 22 20z"/>
+          <path d="M40 14c-6-4-6-10 0-13 6 3 6 9 0 13z"/>
+        </g>
+      </symbol>
+
+      <symbol id="rose-line" viewBox="0 0 200 270">
+        <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M100 70c-18-4-34 8-32 26 2 18 22 28 40 22 20-6 28-28 18-46-9-16-30-22-46-12"/>
+          <path d="M92 88c8-8 22-6 26 4 4 10-4 20-14 20-12 0-20-10-16-20"/>
+          <path d="M98 98c4-3 10-2 12 2"/>
+          <path d="M62 100c-8 14-2 32 14 40M138 92c10 12 8 30-6 40"/>
+          <path d="M100 140c2 40-6 78-14 124"/>
+          <path d="M96 196c-20-4-34-18-34-32 18 0 32 12 34 32z"/>
+          <path d="M92 232c18-6 32-20 34-34-18 2-30 16-34 34z"/>
+        </g>
+      </symbol>
+
+      <symbol id="squiggle" viewBox="0 0 120 12"><path d="M2 6c10-8 14 8 24 0s14 8 24 0 14 8 24 0 14 8 24 0 8 4 20 0" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+
+      <!-- line icons -->
+      <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M4 20l1-4.2L16.2 4.6a1.6 1.6 0 0 1 2.3 0l.9.9a1.6 1.6 0 0 1 0 2.3L8.2 19z M14 7l3 3 M4 20l4.2-1"/></symbol>
+      <symbol id="i-brush" viewBox="0 0 24 24"><path d="M20.5 3.5c-5 1.6-9 5-10.5 9.5l2.2 2.2c4.5-1.5 7.900-5.500 8.300-11.700z M9.800 13.200C7 12.800 5 14.600 5 17c0 1.600-.8 2.500-2 3 3.500 1.200 7.500.200 8-3.200"/></symbol>
+      <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.700 0 2.300-1.200 1.700-2.300-.7-1.300.1-2.700 1.600-2.700H17a4 4 0 0 0 4-4C21 6.500 17 3 12 3z"/><circle cx="7.500" cy="11" r="1"/><circle cx="10" cy="7.200" r="1"/><circle cx="14.500" cy="7.200" r="1"/></symbol>
+      <symbol id="i-frame" viewBox="0 0 24 24"><rect x="3.500" y="4.500" width="17" height="15" rx="1.500"/><path d="M3.500 16l5-5 4 4 3-3 5 5"/><circle cx="16.500" cy="9" r="1.200"/></symbol>
+      <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.500 10.900c.600.500 1 1.200 1 2.100h5c0-.9.400-1.600 1-2.100A6 6 0 0 0 12 3z"/></symbol>
+      <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6.500" r="2.500"/><circle cx="6" cy="17.500" r="2.500"/><path d="M8 8l12 10M8 16L20 6"/></symbol>
+      <symbol id="i-quill" viewBox="0 0 24 24"><path d="M20 4c-9 0-14 5-15 14 M20 4c0 8-5 13-13 13 M5 18l-2 3 M9 13h5"/></symbol>
+      <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l1.500-2.500h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.500"/></symbol>
+      <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.800 8.200l-2 5.600-5.600 2 2-5.600z"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.500c3-1 6-.8 8 1.200 2-2 5-2.200 8-1.200V19c-3-1-6-.8-8 1.200-2-2-5-2.200-8-1.200z M12 6.700v13.500"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.500" width="18" height="13" rx="2"/><path d="M3.500 7.500l8.500 6 8.500-6"/></symbol>
+      <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.500" y="3.500" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.800"/><circle cx="17" cy="7" r=".6" fill="currentColor"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3.500" y="3.500" width="17" height="17" rx="3"/><path d="M8 10.500V16M8 7.800v.1M11.500 16v-5.500M11.500 13c0-1.700 1-2.700 2.400-2.700 1.500 0 2.100 1 2.100 2.500V16"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="logo" href="#home" aria-label="Wania, back to top">Wania <svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><use href="#heart"/></svg></a>
+
+      <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span>
+      </button>
+
+      <nav aria-label="Main">
+        <ul class="nav__links" id="menu">
+          <li><a href="#home" data-nav>Home</a></li>
+          <li><a href="#about" data-nav>About</a></li>
+          <li><a href="#creativity" data-nav>Creativity</a></li>
+          <li><a href="#education" data-nav>Education</a></li>
+          <li><a href="#gallery" data-nav>Gallery</a></li>
+          <li><a href="#contact" data-nav>Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="section hero" id="home">
+      <div class="hero__glow" aria-hidden="true"></div>
+
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow" data-intro style="--i:0"><svg viewBox="0 0 48 48" aria-hidden="true"><use href="#flower"/></svg>WELCOME TO MY LITTLE CORNER <svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><use href="#heart"/></svg></p>
+
+          <h1 class="hero__title" aria-label="Hi, I’m Wania">
+            <span class="line" aria-hidden="true"><span>Hi, I’m</span></span>
+            <span class="line" aria-hidden="true"><span class="hero__name">Wania <svg class="heart" viewBox="0 0 24 24"><use href="#heart"/></svg></span></span>
+          </h1>
+
+          <p class="hero__sub" data-intro style="--i:2">Matric Graduate &amp; Concordia College Student</p>
+
+          <p class="lead hero__lead" data-intro style="--i:3">I’m a creative and curious student who enjoys exploring art, creativity, and new ideas while continuing to learn and grow.</p>
+
+          <div class="hero__cta" data-intro style="--i:4">
+            <a class="btn btn--rose" href="#education"><svg class="spark" viewBox="0 0 24 24" aria-hidden="true"><use href="#sparkle"/></svg>Explore My Journey</a>
+            <a class="btn btn--soft" href="#about"><svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><use href="#heart"/></svg>Get to Know Me</a>
+          </div>
+        </div>
+
+        <!-- editorial composition -->
+        <div class="hero-art" data-intro style="--i:2" data-parallax="0.05">
+          <div class="shape shape--blob" data-depth="-10" aria-hidden="true"></div>
+          <div class="shape shape--sun" data-depth="14" aria-hidden="true"></div>
+          <div class="shape shape--arch" data-depth="-6" aria-hidden="true"></div>
+
+          <svg class="dots-ring" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="1 7" stroke-linecap="round"/></svg>
+
+          <div class="hero-art__figure" data-depth="8">
+            <img src="wania-portrait.jpg" width="735" height="993" alt="Illustration of a young woman with long golden-brown hair, resting her chin on her hand and gazing up thoughtfully" fetchpriority="high">
+          </div>
+
+          <span class="deco" style="--s:56px;top:2%;left:4%;--d:11s;color:var(--rose)" data-depth="18"><svg viewBox="0 0 48 48"><use href="#flower"/></svg></span>
+          <span class="deco" style="--s:40px;top:44%;right:1%;--d:9s;--dl:-3s;color:var(--lav-deep)" data-depth="22"><svg viewBox="0 0 48 48"><use href="#daisy"/></svg></span>
+          <span class="deco" style="--s:34px;bottom:4%;left:20%;--d:12s;--dl:-5s;color:var(--rose)" data-depth="14"><svg viewBox="0 0 48 48"><use href="#flower"/></svg></span>
+          <span class="deco deco--twinkle" style="--s:22px;top:14%;right:10%;--d:4s;color:var(--champ-deep)" data-depth="26"><svg viewBox="0 0 24 24"><use href="#sparkle"/></svg></span>
+          <span class="deco deco--twinkle" style="--s:14px;top:34%;left:0%;--d:5s;--dl:-2s;color:var(--lav-deep)" data-depth="20"><svg viewBox="0 0 24 24"><use href="#sparkle"/></svg></span>
+          <span class="deco deco--twinkle" style="--s:18px;bottom:22%;right:6%;--d:6s;--dl:-1s;color:var(--rose)" data-depth="24"><svg viewBox="0 0 24 24"><use href="#sparkle"/></svg></span>
+          <span class="deco" style="--s:26px;top:8%;left:30%;--d:10s;--dl:-4s;color:var(--rose)" data-depth="16"><svg viewBox="0 0 24 24"><use href="#heart"/></svg></span>
+
+          <p class="hero-art__note hand" aria-hidden="true">hello, it’s me <svg class="heart" viewBox="0 0 24 24"><use href="#heart-fill"/></svg></p>
+
+          <div class="sticker" data-depth="12">
+            <span class="sticker__tape" aria-hidden="true"></span>
+            <small>currently at</small>
+            <strong>Concordia College</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+      <span class="deco" style="--s:90px;top:6%;right:4%;--d:14s;color:var(--lav-deep);opacity:.5" data-parallax="0.08"><svg viewBox="0 0 48 48"><use href="#flower"/></svg></span>
+      <span class="deco deco--twinkle" style="--s:20px;bottom:14%;left:5%;--d:5s;color:var(--champ-deep)"><svg viewBox="0 0 24 24"><use href="#sparkle"/></svg></span>
+
+      <div class="wrap about__grid">
+        <div class="about__visual" data-reveal="left">
+          <div class="about__offset" aria-hidden="true"></div>
+          <div class="about__frame">
+            <img src="wania-portrait.jpg" width="735" height="993" alt="" loading="lazy">
+          </div>
+          <span class="tape tape--a" aria-hidden="true"></span>
+
+          <div class="note-card" aria-hidden="true">
+            <p class="hand">note to self:<br>keep making little things <svg class="heart" viewBox="0 0 24 24"><use href="#heart"/></svg></p>
+          </div>
+
+          <span class="deco" style="--s:64px;top:-3%;left:-3%;--d:12s;color:var(--rose)" data-parallax="0.06"><svg viewBox="0 0 80 160" style="rotate:-28deg"><use href="#sprig"/></svg></span>
+          <span class="deco deco--twinkle" style="--s:16px;top:20%;right:-2%;--d:4s;color:var(--rose)"><svg viewBox="0 0 24 24"><use href="#sparkle"/></svg></span>
+        </div>
+
+        <div class="about__text">
+          <p class="eyebrow" data-reveal><svg viewBox="0 0 48 48" aria-hidden="true"><use href="#daisy"/></svg>A LITTLE ABOUT ME</p>
+          <h2 class="title" data-reveal style="--dl:.08s">Learning, creating &amp; discovering <svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><use href="#heart"/></svg></h2>
+
+          <p class="lead" data-reveal style="--dl:.16s">I’ve completed my matric and I’m now continuing my studies at Concordia College. It feels like a brand-new chapter, and I’m taking it one curious step at a time.</p>
+          <p class="lead" data-reveal style="--dl:.24s">Outside of class I love drawing, sketching and painting, and I’m always happy to make a little mess while I figure out colours and shapes. I’m not a professional, just someone who enjoys the process, tries new things and learns something more every day.</p>
+
+          <ul class="tags" aria-label="Things I enjoy">
+            <li data-reveal style="--dl:.3s">Drawing</li>
+            <li data-reveal style="--dl:.34s">Sketching</li>
+            <li data-reveal style="--dl:.38s">Painting</li>
+            <li data-reveal style="--dl:.42s">Creative activities</li>
+            <li data-reveal style="--dl:.46s">Exploring new ideas</li>
+            <li data-reveal style="--dl:.5s">Learning new things</li>
+            <li data-reveal style="--dl:.54s">Art</li>
+            <li data-reveal style="--dl:.58s">Visual creativity</li>
+          </ul>
+
+          <p class="signoff hand" data-reveal style="--dl:.6s">with love, Wania</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CREATIVE SKILLS ============ -->
+    <section class="section craft" id="creativity">
+      <span class="deco" style="--s:70px;top:5%;left:3%;--d:13s;color:var(--rose);opacity:.55" data-parallax="0.07"><svg viewBox="0 0 48 48"><use href="#daisy"/></svg></span>
+      <span class="deco deco--twinkle" style="--s:18px;top:12%;right:12%;--d:5s;color:var(--lav-deep)"><svg viewBox="0 0 24 24"><use href="#sparkle"/></svg></span>
+
+      <div class="wrap">
+        <header class="section-head" data-draw>
+          <p class="eyebrow" data-reveal><svg viewBox="0 0 48 48" aria-hidden="true"><use href="#flower"/></svg>MY CREATIVE SIDE</p>
+          <h2 class="title" data-reveal style="--dl:.08s">Things I Love Creating <svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><use href="#heart"/></svg></h2>
+          <svg class="squiggle" viewBox="0 0 120 12" aria-hidden="true"><use href="#squiggle"/></svg>
+          <p class="lead" data-reveal style="--dl:.16s">Little things I enjoy exploring, practicing, and learning.</p>
+        </header>
+
+        <ul class="craft-grid">
+          <li class="craft craft--paper" style="--r:-1.2deg" data-reveal>
+            <span class="craft__tape" aria-hidden="true"></span>
+            <span class="craft__icon"><svg class="ico" viewBox="0 0 24 24"><use href="#i-pencil"/></svg></span>
+            <span class="craft__label hand">pencil &amp; paper</span>
+            <h3>Sketching</h3>
+            <p>Exploring pencil sketches, shapes, faces, and everyday ideas.</p>
+          </li>
+          <li class="craft craft--outline" style="--r:1deg;--dl:.08s" data-reveal>
+            <span class="craft__icon"><svg class="ico" viewBox="0 0 24 24"><use href="#i-palette"/></svg></span>
+            <span class="craft__label hand">colour play</span>
+            <h3>Painting</h3>
+            <p>Experimenting with colors, textures, and different painting styles.</p>
+          </li>
+          <li class="craft craft--lav" style="--r:-.8deg" data-reveal>
+            <span class="craft__icon"><svg class="ico" viewBox="0 0 24 24"><use href="#i-frame"/></svg></span>
+            <span class="craft__label hand">line &amp; shape</span>
+            <h3>Drawing &amp; Art</h3>
+            <p>Enjoying visual expression through simple drawings and artwork.</p>
+          </li>
+          <li class="craft craft--paper" style="--r:1.4deg" data-reveal>
+            <span class="craft__tape craft__tape--b" aria-hidden="true"></span>
+            <span class="craft__icon"><svg class="ico" viewBox="0 0 24 24"><use href="#i-bulb"/></svg></span>
+            <span class="craft__label hand">idea jar</span>
+            <h3>Creative Ideas</h3>
+            <p>Coming up with imaginative ideas and turning them into something visual.</p>
+          </li>
+          <li class="craft craft--peach" style="--r:1deg" data-reveal>
+            <span class="craft__icon"><svg class="ico" viewBox="0 0 24 24"><use href="#i-scissors"/></svg></span>
+            <span class="craft__label hand">handmade</span>
+            <h3>DIY &amp; Craft</h3>
+            <p>Exploring handmade projects and decorative crafts.</p>
+          </li>
+          <li class="craft craft--outline" style="--r:-1.2deg" data-reveal>
+            <span class="craft__icon"><svg class="ico" viewBox="0 0 24 24"><use href="#i-quill"/></svg></span>
+            <span class="craft__label hand">pages &amp; thoughts</span>
+            <h3>Creative Writing</h3>
+            <p>Enjoying stories, thoughts, journaling, and creative expression.</p>
+          </li>
+          <li class="craft craft--paper" style="--r:.8deg" data-reveal>
+            <span class="craft__tape" aria-hidden="true"></span>
+            <span class="craft__icon"><svg class="ico" viewBox="0 0 24 24"><use href="#i-camera"/></svg></span>
+            <span class="craft__label hand">tiny moments</span>
+            <h3>Photography</h3>
+            <p>Capturing interesting moments, details, colors, and surroundings.</p>
+          </li>
+          <li class="craft craft--lav" style="--r:-1.4deg" data-reveal>
+            <span class="craft__icon"><svg class="ico" viewBox="0 0 24 24"><use href="#i-compass"/></svg></span>
+            <span class="craft__label hand">always curious</span>
+            <h3>Creativity &amp; Exploration</h3>
+            <p>Trying new things and learning through curiosity.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="section edu" id="education">
+      <span class="deco deco--twinkle" style="--s:16px;top:10%;left:8%;--d:5s;color:var(--champ-deep)"><svg viewBox="0 0 24 24"><use href="#sparkle"/></svg></span>
+
+      <div class="wrap edu__grid">
+        <header class="edu__head" data-draw>
+          <p class="eyebrow" data-reveal><svg viewBox="0 0 48 48" aria-hidden="true"><use href="#daisy"/></svg>CHAPTERS SO FAR</p>
+          <h2 class="title" data-reveal style="--dl:.08s">My Learning Journey <svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><use href="#heart"/></svg></h2>
+          <p class="lead" data-reveal style="--dl:.16s">Two chapters so far, and plenty of blank pages still waiting to be filled.</p>
+          <svg class="edu__sprig" viewBox="0 0 80 160" aria-hidden="true">
+            <g fill="currentColor" fill-opacity=".1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+              <path class="draw" pathLength="1" fill="none" d="M40 158C38 110 44 60 40 8"/>
+              <path class="leaf" d="M40 122C26 120 16 110 14 98c14 0 24 8 26 24z"/><path class="leaf" d="M41 102c14-2 24-12 26-24-14 0-24 8-26 24z"/>
+              <path class="leaf" d="M41 80C27 78 17 68 15 56c14 0 24 8 26 24z"/><path class="leaf" d="M42 60c14-2 24-12 26-24-14 0-24 8-26 24z"/>
+              <path class="leaf" d="M42 38C30 36 22 28 20 18c12 0 20 8 22 20z"/><path class="leaf" d="M40 14c-6-4-6-10 0-13 6 3 6 9 0 13z"/>
+            </g>
+          </svg>
+        </header>
+
+        <ol class="timeline" data-draw>
+          <svg class="timeline__line" viewBox="0 0 30 520" preserveAspectRatio="none" aria-hidden="true">
+            <path class="draw" pathLength="1" d="M15 0C5 40 25 80 15 120S5 200 15 240 25 320 15 360 8 460 15 520"/>
+          </svg>
+
+          <li class="tl-item" data-reveal>
+            <span class="tl-node" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#flower"/></svg></span>
+            <div class="tl-card">
+              <span class="badge badge--done">Completed</span>
+              <h3>Matric</h3>
+              <p>Completed matric education and ready for the next chapter.</p>
+            </div>
+          </li>
+
+          <li class="tl-item tl-item--now" data-reveal style="--dl:.15s">
+            <span class="tl-node" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#sparkle"/></svg></span>
+            <div class="tl-card">
+              <span class="badge badge--now">Currently Studying</span>
+              <h3>Concordia College</h3>
+              <p>Continuing education while discovering new interests and creative passions.</p>
+            </div>
+          </li>
+
+          <li class="tl-end" data-reveal style="--dl:.3s" aria-hidden="true">
+            <span class="tl-dot"></span><span class="tl-dot"></span><span class="tl-dot"></span>
+            <span class="hand">to be continued <svg class="heart" viewBox="0 0 24 24"><use href="#heart"/></svg></span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ INTERESTS (scrapbook) ============ -->
+    <section class="section interests" id="interests">
+      <span class="deco" style="--s:80px;bottom:6%;right:3%;--d:13s;color:var(--rose);opacity:.5" data-parallax="0.08"><svg viewBox="0 0 48 48"><use href="#flower"/></svg></span>
+
+      <div class="wrap">
+        <header class="section-head section-head--center">
+          <p class="eyebrow" data-reveal><svg viewBox="0 0 48 48" aria-hidden="true"><use href="#flower"/></svg>MY SCRAPBOOK</p>
+          <h2 class="title" data-reveal style="--dl:.08s">Little Things I Love</h2>
+          <p class="hand interests__line" data-reveal style="--dl:.16s">Art • Sketching • Painting • Creativity • Reading • Learning • Photography • Exploring</p>
+        </header>
+
+        <ul class="scrapbook">
+          <li class="scrap scrap--polaroid" style="--r:-3deg" data-reveal>
+            <div class="scrap__body">
+              <span class="scrap__pic scrap__pic--blush"><svg class="ico" viewBox="0 0 24 24"><use href="#i-palette"/></svg></span>
+              <h3>Art</h3><p class="hand">colour everywhere</p>
+            </div>
+          </li>
+          <li class="scrap scrap--torn" style="--r:2deg" data-reveal>
+            <div class="scrap__body">
+              <svg class="ico" viewBox="0 0 24 24"><use href="#i-pencil"/></svg>
+              <h3>Sketching</h3><p class="hand">pencil dust &amp; ideas</p>
+            </div>
+          </li>
+          <li class="scrap scrap--sticker" style="--r:-2deg" data-reveal>
+            <div class="scrap__body">
+              <svg class="ico" viewBox="0 0 24 24"><use href="#i-brush"/></svg>
+              <h3>Painting</h3><p class="hand">soft washes</p>
+            </div>
+          </li>
+          <li class="scrap scrap--tag" style="--r:3deg" data-reveal>
+            <div class="scrap__body">
+              <svg class="ico" viewBox="0 0 24 24"><use href="#i-bulb"/></svg>
+              <h3>Creativity</h3><p class="hand">what if…</p>
+            </div>
+          </li>
+          <li class="scrap scrap--torn" style="--r:-2.5deg" data-reveal>
+            <div class="scrap__body">
+              <svg class="ico" viewBox="0 0 24 24"><use href="#i-book"/></svg>
+              <h3>Reading</h3><p class="hand">one more page</p>
+            </div>
+          </li>
+          <li class="scrap scrap--polaroid" style="--r:2.5deg" data-reveal>
+            <div class="scrap__body">
+              <span class="scrap__pic scrap__pic--lav"><svg class="spark" viewBox="0 0 24 24"><use href="#sparkle"/></svg></span>
+              <h3>Learning</h3><p class="hand">new every day</p>
+            </div>
+          </li>
+          <li class="scrap scrap--polaroid" style="--r:-1.5deg" data-reveal>
+            <div class="scrap__body">
+              <span class="scrap__pic scrap__pic--peach"><svg class="ico" viewBox="0 0 24 24"><use href="#i-camera"/></svg></span>
+              <h3>Photography</h3><p class="hand">tiny details</p>
+            </div>
+          </li>
+          <li class="scrap scrap--sticker" style="--r:3deg" data-reveal>
+            <div class="scrap__body">
+              <svg class="ico" viewBox="0 0 24 24"><use href="#i-compass"/></svg>
+              <h3>Exploring</h3><p class="hand">curious by nature</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section gallery" id="gallery">
+      <span class="deco deco--twinkle" style="--s:18px;top:6%;right:9%;--d:5s;color:var(--rose)"><svg viewBox="0 0 24 24"><use href="#sparkle"/></svg></span>
+      <span class="deco" style="--s:60px;top:4%;left:3%;--d:12s;color:var(--lav-deep);opacity:.6" data-parallax="0.07"><svg viewBox="0 0 48 48"><use href="#daisy"/></svg></span>
+
+      <div class="wrap">
+        <header class="section-head section-head--center">
+          <p class="eyebrow" data-reveal><svg viewBox="0 0 48 48" aria-hidden="true"><use href="#flower"/></svg>MY CREATIVE CORNER</p>
+          <h2 class="title" data-reveal style="--dl:.08s">A Little Corner of My Creativity</h2>
+          <p class="hand gallery__note" data-reveal style="--dl:.16s">(sample pieces for now, my own artwork will take their place soon <svg class="heart" viewBox="0 0 24 24"><use href="#heart"/></svg>)</p>
+        </header>
+
+        <div class="masonry">
+
+          <!-- 1 · pencil rose -->
+          <figure class="polaroid" style="--r:-2deg" tabindex="0" data-reveal>
+            <div class="polaroid__art">
+              <svg viewBox="0 0 300 400" role="img" aria-label="Placeholder: pencil sketch of a rose">
+                <rect width="300" height="400" fill="#F6EEE1"/>
+                <g fill="none" stroke="#B9A592" stroke-width=".7" stroke-dasharray="3 5" opacity=".6"><circle cx="150" cy="140" r="92"/><path d="M150 40v330M50 140h200"/></g>
+                <g fill="none" stroke="#6F615B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M150 88c-34-6-62 18-58 52 4 34 40 54 72 40 36-14 46-56 22-82-18-20-52-24-76-2"/>
+                  <path d="M142 110c14-12 38-6 44 12 6 18-8 36-26 38-20 2-36-12-34-30"/>
+                  <path d="M150 126c8-6 20-3 22 6 2 9-6 16-14 15"/>
+                  <path d="M100 150c-6 22 6 44 30 54"/><path d="M202 138c8 20 2 44-18 56"/>
+                  <path d="M150 196c2 60-4 110-12 164"/>
+                  <path d="M146 262c-30-6-52-26-56-48 30 2 52 20 56 48z"/><path d="M146 262c-22-8-38-22-46-40" stroke-width=".9"/>
+                  <path d="M142 316c30-10 52-30 56-52-30 4-50 24-56 52z"/>
+                </g>
+                <g stroke="#8D7F78" stroke-width=".8" stroke-linecap="round" opacity=".65"><path d="M104 166l10-6M108 176l12-8M114 186l12-8M122 194l10-6M176 112l10-4M172 122l14-6M168 132l16-6M186 150l8-6M182 160l10-8"/><path d="M104 232l10-4M100 240l14-6M96 248l14-6M176 288l10-6M172 296l14-8M168 304l12-6"/></g>
+                <text x="268" y="382" text-anchor="end" font-family="Parisienne, cursive" font-size="17" fill="#93535D">rose study</text>
+              </svg>
+              <div class="polaroid__veil"><p>Soft graphite, patience and one very sharp pencil.</p></div>
+            </div>
+            <figcaption>rose study · pencil</figcaption>
+          </figure>
+
+          <!-- 2 · watercolour -->
+          <figure class="polaroid" style="--r:1.6deg" tabindex="0" data-reveal>
+            <div class="polaroid__art">
+              <svg viewBox="0 0 300 300" role="img" aria-label="Placeholder: soft watercolour wash in pink, lavender and peach">
+                <defs>
+                  <filter id="wc" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency=".018" numOctaves="3" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="32"/><feGaussianBlur stdDeviation="2"/></filter>
+                  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 .55  0 0 0 0 .42  0 0 0 0 .38  0 0 0 .22 0"/></filter>
+                </defs>
+                <rect width="300" height="300" fill="#FAF3E8"/>
+                <g filter="url(#wc)">
+                  <circle cx="110" cy="120" r="78" fill="#F3C7C4" opacity=".9"/>
+                  <circle cx="195" cy="150" r="70" fill="#D9CFEA" opacity=".85"/>
+                  <ellipse cx="150" cy="218" rx="112" ry="46" fill="#F7D9BF" opacity=".9"/>
+                  <circle cx="208" cy="76" r="32" fill="#EBCB9E" opacity=".8"/>
+                </g>
+                <path d="M30 262c40-14 70 10 110-4s70-8 130 4" fill="none" stroke="#C98A8F" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+                <g fill="#C98A8F" opacity=".7"><circle cx="48" cy="46" r="3"/><circle cx="62" cy="62" r="1.8"/><circle cx="252" cy="236" r="2.6"/></g>
+                <rect width="300" height="300" filter="url(#grain)"/>
+              </svg>
+              <div class="polaroid__veil"><p>Seeing where the colours want to go.</p></div>
+            </div>
+            <figcaption>sunset wash · watercolour</figcaption>
+          </figure>
+
+          <!-- 3 · wildflowers -->
+          <figure class="polaroid" style="--r:-1deg" tabindex="0" data-reveal>
+            <div class="polaroid__art">
+              <svg viewBox="0 0 300 420" role="img" aria-label="Placeholder: floral drawing of three wildflowers">
+                <rect width="300" height="420" fill="#F8F0E4"/>
+                <g fill="none" stroke="#8C8F7A" stroke-width="1.4" stroke-linecap="round">
+                  <path d="M92 150C88 230 100 320 86 404"/><path d="M168 118C176 210 160 300 172 404"/><path d="M236 190C230 260 242 330 232 404"/>
+                </g>
+                <g fill="#8C8F7A" fill-opacity=".14" stroke="#8C8F7A" stroke-width="1.2" stroke-linejoin="round">
+                  <path d="M90 270c-28-4-44-20-48-38 26 0 44 14 48 38z"/><path d="M174 300c26-8 42-24 44-42-26 4-42 20-44 42z"/><path d="M234 320c-20-2-32-14-34-28 20 2 32 12 34 28z"/><path d="M94 330c22-8 34-22 36-36-22 4-34 18-36 36z"/>
+                </g>
+                <use href="#flower" x="42" y="100" width="100" height="100" color="#C98A8F"/>
+                <use href="#daisy" x="122" y="64" width="92" height="92" color="#8E80AE"/>
+                <use href="#flower" x="204" y="146" width="64" height="64" color="#CC8F94"/>
+                <circle cx="92" cy="150" r="5" fill="#C98A8F" opacity=".8"/><circle cx="168" cy="110" r="4" fill="#8E80AE" opacity=".8"/>
+                <text x="150" y="408" text-anchor="middle" font-family="Parisienne, cursive" font-size="17" fill="#93535D">wildflowers</text>
+              </svg>
+              <div class="polaroid__veil"><p>Three little flowers from the margin of a notebook.</p></div>
+            </div>
+            <figcaption>wildflowers · ink &amp; colour</figcaption>
+          </figure>
+
+          <!-- 4 · abstract arches -->
+          <figure class="polaroid" style="--r:2deg" tabindex="0" data-reveal>
+            <div class="polaroid__art">
+              <svg viewBox="0 0 300 340" role="img" aria-label="Placeholder: abstract art of pastel arches and a sun">
+                <rect width="300" height="340" fill="#EFE3D3"/>
+                <circle cx="212" cy="86" r="38" fill="#F7DDCB"/>
+                <path d="M30 320V190a58 58 0 0 1 116 0v130z" fill="#F5DAD6"/>
+                <path d="M96 320V150a56 56 0 0 1 112 0v170z" fill="#DDD4EC" opacity=".92"/>
+                <path d="M164 320V214a48 48 0 0 1 96 0v106z" fill="#CC8F94" opacity=".88"/>
+                <g fill="none" stroke="#93535D" stroke-width="1.2" stroke-linecap="round" opacity=".7"><path d="M46 320V196a42 42 0 0 1 84 0v124"/><path d="M112 320V156a40 40 0 0 1 80 0v164"/></g>
+                <g fill="#FFFBF5" opacity=".8"><circle cx="120" cy="120" r="3"/><circle cx="176" cy="104" r="2"/><circle cx="70" cy="160" r="2.4"/></g>
+                <path d="M0 320h300v20H0z" fill="#D8C3A5" opacity=".7"/>
+              </svg>
+              <div class="polaroid__veil"><p>Shapes first, meaning later.</p></div>
+            </div>
+            <figcaption>arches · abstract</figcaption>
+          </figure>
+
+          <!-- 5 · doodles -->
+          <figure class="polaroid" style="--r:-1.6deg" tabindex="0" data-reveal>
+            <div class="polaroid__art">
+              <svg viewBox="0 0 300 260" role="img" aria-label="Placeholder: margin doodles of hearts, stars and flowers on lined paper">
+                <rect width="300" height="260" fill="#FFFBF2"/>
+                <g stroke="#C9D3E3" stroke-width=".8"><path d="M0 40h300M0 66h300M0 92h300M0 118h300M0 144h300M0 170h300M0 196h300M0 222h300"/></g>
+                <path d="M38 0v260" stroke="#E7A9AE" stroke-width="1"/>
+                <g fill="none" stroke="#93535D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M80 70c-22-16-34-30-26-42 6-9 20-6 26 4 6-10 20-13 26-4 8 12-4 26-26 42z"/>
+                  <path d="M170 34l7 16 17 2-13 11 4 17-15-9-15 9 4-17-13-11 17-2z"/>
+                  <path d="M236 100c-14-14 10-30 20-16s-8 30-26 22-14-34 8-40"/>
+                  <path d="M60 150c8-8 18-8 24 0s16 8 24 0 16-8 24 0"/>
+                  <path d="M170 160h40v22a20 20 0 0 1-40 0zM210 168h8a8 8 0 0 1 0 16h-8"/>
+                  <path d="M180 148c-4-8 4-10 0-18M192 148c-4-8 4-10 0-18" stroke="#8E80AE"/>
+                </g>
+                <use href="#daisy" x="60" y="178" width="44" height="44" color="#8E80AE"/>
+                <use href="#sparkle" x="232" y="26" width="18" height="18" color="#C9A56B"/>
+                <use href="#sparkle" x="132" y="96" width="12" height="12" color="#CC8F94"/>
+                <text x="150" y="246" text-anchor="middle" font-family="Parisienne, cursive" font-size="16" fill="#8E80AE">doodle break</text>
+              </svg>
+              <div class="polaroid__veil"><p>What my notebook margins look like on a quiet afternoon.</p></div>
+            </div>
+            <figcaption>margin doodles</figcaption>
+          </figure>
+
+          <!-- 6 · moon -->
+          <figure class="polaroid" style="--r:1.2deg" tabindex="0" data-reveal>
+            <div class="polaroid__art">
+              <svg viewBox="0 0 300 380" role="img" aria-label="Placeholder: painting of a crescent moon over pink hills">
+                <defs>
+                  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#CFC4E6"/><stop offset=".6" stop-color="#F2D3D3"/><stop offset="1" stop-color="#F8E0CC"/></linearGradient>
+                  <mask id="cres"><rect width="300" height="380" fill="#fff"/><circle cx="224" cy="96" r="40" fill="#000"/></mask>
+                </defs>
+                <rect width="300" height="380" fill="url(#sky)"/>
+                <circle cx="200" cy="106" r="46" fill="#FFF6E4" mask="url(#cres)"/>
+                <use href="#sparkle" x="60" y="60" width="18" height="18" color="#FFF6E4"/>
+                <use href="#sparkle" x="108" y="130" width="10" height="10" color="#FFF6E4"/>
+                <use href="#sparkle" x="40" y="168" width="12" height="12" color="#FFF6E4"/>
+                <use href="#sparkle" x="250" y="170" width="14" height="14" color="#FFF6E4"/>
+                <path d="M0 270c60-40 110-34 170-8s90 8 130-12v130H0z" fill="#E3B7B9" opacity=".9"/>
+                <path d="M0 310c70-30 120-20 180 0s80 6 120-10v80H0z" fill="#CF9CA3"/>
+                <path d="M0 350c60-18 110-10 170 4s90 0 130-10v36H0z" fill="#B88592"/>
+                <text x="150" y="372" text-anchor="middle" font-family="Parisienne, cursive" font-size="15" fill="#FFF6E4">little moon</text>
+              </svg>
+              <div class="polaroid__veil"><p>A quiet evening, painted in my favourite colours.</p></div>
+            </div>
+            <figcaption>little moon · painting</figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ QUOTE ============ -->
+    <section class="section quote" id="quote" aria-label="A little quote">
+      <div class="particles" id="particles" aria-hidden="true"></div>
+
+      <span class="deco quote__rose" style="--s:190px" data-draw data-parallax="0.08" aria-hidden="true"><svg class="inline-draw" viewBox="0 0 200 270">
+        <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <path class="draw" pathLength="1" d="M100 70c-18-4-34 8-32 26 2 18 22 28 40 22 20-6 28-28 18-46-9-16-30-22-46-12"/>
+          <path class="draw" pathLength="1" d="M92 88c8-8 22-6 26 4 4 10-4 20-14 20-12 0-20-10-16-20"/>
+          <path class="draw" pathLength="1" d="M98 98c4-3 10-2 12 2"/>
+          <path class="draw" pathLength="1" d="M62 100c-8 14-2 32 14 40M138 92c10 12 8 30-6 40"/>
+          <path class="draw" pathLength="1" d="M100 140c2 40-6 78-14 124"/>
+          <path class="draw" pathLength="1" d="M96 196c-20-4-34-18-34-32 18 0 32 12 34 32z"/>
+          <path class="draw" pathLength="1" d="M92 232c18-6 32-20 34-34-18 2-30 16-34 34z"/>
+        </g>
+      </svg></span>
+      <span class="deco quote__sprig" style="--s:120px" data-draw data-parallax="0.06" aria-hidden="true"><svg class="inline-draw" viewBox="0 0 80 160" aria-hidden="true">
+            <g fill="currentColor" fill-opacity=".1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+              <path class="draw" pathLength="1" fill="none" d="M40 158C38 110 44 60 40 8"/>
+              <path class="leaf" d="M40 122C26 120 16 110 14 98c14 0 24 8 26 24z"/><path class="leaf" d="M41 102c14-2 24-12 26-24-14 0-24 8-26 24z"/>
+              <path class="leaf" d="M41 80C27 78 17 68 15 56c14 0 24 8 26 24z"/><path class="leaf" d="M42 60c14-2 24-12 26-24-14 0-24 8-26 24z"/>
+              <path class="leaf" d="M42 38C30 36 22 28 20 18c12 0 20 8 22 20z"/><path class="leaf" d="M40 14c-6-4-6-10 0-13 6 3 6 9 0 13z"/>
+            </g>
+          </svg></span>
+      <span class="deco deco--twinkle" style="--s:20px;top:18%;left:22%;--d:5s;color:var(--champ-deep)"><svg viewBox="0 0 24 24"><use href="#sparkle"/></svg></span>
+      <span class="deco deco--twinkle" style="--s:14px;bottom:20%;right:24%;--d:6s;--dl:-2s;color:var(--lav-deep)"><svg viewBox="0 0 24 24"><use href="#sparkle"/></svg></span>
+
+      <div class="wrap">
+        <figure class="quote__inner" data-reveal>
+          <p class="hand quote__hand">a page from my journal</p>
+          <blockquote class="quote__text" data-words>“Creating, learning, and growing — one little step at a time.”</blockquote>
+          <figcaption class="hand quote__by"><svg class="spark" viewBox="0 0 24 24" aria-hidden="true"><use href="#sparkle"/></svg> Wania <svg class="spark" viewBox="0 0 24 24" aria-hidden="true"><use href="#sparkle"/></svg></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <span class="deco" style="--s:70px;top:10%;left:6%;--d:12s;color:var(--rose);opacity:.55" data-parallax="0.07"><svg viewBox="0 0 48 48"><use href="#flower"/></svg></span>
+      <span class="deco deco--twinkle" style="--s:18px;bottom:18%;right:10%;--d:5s;color:var(--lav-deep)"><svg viewBox="0 0 24 24"><use href="#sparkle"/></svg></span>
+
+      <div class="wrap contact__inner">
+        <svg class="contact__mail" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg>
+        <h2 class="title" data-reveal>Let’s Connect <svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><use href="#heart"/></svg></h2>
+        <p class="lead" data-reveal style="--dl:.1s">Have a little hello to share? I’d love to hear from you.</p>
+
+        <div class="contact__links" data-reveal style="--dl:.2s">
+          <!-- ✎ Replace these three links with Wania's real details -->
+          <a class="link-btn" href="mailto:hello@example.com"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg>Email</a>
+          <a class="link-btn" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-insta"/></svg>Instagram</a>
+          <a class="link-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <p class="footer__orn" aria-hidden="true">
+      <svg class="spark" viewBox="0 0 24 24"><use href="#sparkle"/></svg>
+      <svg class="heart" viewBox="0 0 24 24"><use href="#heart"/></svg>
+      <svg class="flower" viewBox="0 0 48 48"><use href="#flower"/></svg>
+      <svg class="heart" viewBox="0 0 24 24"><use href="#heart"/></svg>
+      <svg class="spark" viewBox="0 0 24 24"><use href="#sparkle"/></svg>
+    </p>
+    <p class="footer__text hand">Made with <svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><use href="#heart-fill"/></svg> by Wania</p>
+  </footer>
+</body>
+</html>
